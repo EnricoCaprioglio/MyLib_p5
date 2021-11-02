@@ -8,12 +8,13 @@ let row;
 let resolution = 20;
 let fr = 60;
 // colors settings
+let n_colors;
 let colors1 = [];
 let divisor = 5;
 let death_colors = [];
 let number_explosion = 15; // use mulpiple of three
 // death settings
-let death_time = 150;
+let death_time = 120;
 
 // setup
 function setup() {
