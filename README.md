@@ -1,5 +1,11 @@
 # MyLib_p5
-#### This repository is intended to be a quick and easy library to store my projects in p5.js as well as a library for useful classes for many different objects. All the classes can be found in the ClassLib folder.
+#### This repository is intended to be a quick and easy library to store my projects in p5.js as well as a library for useful classes for many different objects.
+Quick description of the folders:
+* ClassLib: here you can find some useful classes that can be used for many different projects with almost no modifications.
+* current_projects: my current projects.
+* old_projects: guess what, my old projects with even worse coding practices.
+* finished_projects: surprisingly, the projects I have finished that I like.
+* empty_project: a folder with an empty project to get started quickly.
 
 ## Instructions to use the code
 ### Some experience
