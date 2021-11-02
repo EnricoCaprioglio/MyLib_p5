@@ -55,7 +55,7 @@ class Thing {
       sum -= this.value;
       this.friends = sum;
     }
-  
+    
     update() {
       if (this.counter >= death_time) {
         this.counter += 0.5;
