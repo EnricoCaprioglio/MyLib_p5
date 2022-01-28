@@ -2,7 +2,6 @@ class Agent {
     constructor(x, y) {
       this.pos = createVector(x, y);
       this.vel = p5.Vector.random2D();  // random init velocity
-      this.vel.mult(random(0.5, 2));    // slightly going down
       this.acc = createVector(0, 0);
       this.r = 4;
       this.lifetime = 255;
@@ -19,6 +18,9 @@ class Agent {
     edges() {
       if (this.pos.y >= height - this.r) {
         this.pos.y = height - this.r;
+        this.vel.y *= -1;
+      } else if (this.pos.y <= this.r) {
+        this.pos.y = this.r;
         this.vel.y *= -1;
       }
   
