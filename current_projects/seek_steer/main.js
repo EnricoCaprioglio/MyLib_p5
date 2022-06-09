@@ -1,27 +1,24 @@
-// init empty array to store the alive agents
-let agents = [];
+const flock = [];
+let alignSlider, cohesionSlider, separationSlider;
+
 
 function setup() {
-  createCanvas(600, 600);
-  console.log(random(0.5, 2))
+  createCanvas(640, 360);
+  alignSlider = createSlider(0,5,1,0.1);
+  cohesionSlider = createSlider(0,5,1,0.1);
+  separationSlider = createSlider(0,5,1,0.1);
+  // Create objects
+  for (let i = 0; i < 200; i++) {
+    flock.push(new Agent());
+  }
 }
 
 function draw() {
   background(38);
-  for (let i = 0; i < 10; i++) {
-    agents.push(new Agent(300, 550));
-  }
-
-  for (let agent of agents) {
-    let gravity = createVector(0, -0.2);
-    agent.applyForce(gravity);
+  for (let agent of flock) {
+    agent.edges();
+    agent.flock(flock)
     agent.update();
     agent.show();
-  }
-  // start from last one since we remove dead agents
-  for (let i = agents.length - 1; i >= 0; i--) {
-    if (agents[i].isDead()) {
-        agents.splice(i, 1);
-    }
   }
 }
